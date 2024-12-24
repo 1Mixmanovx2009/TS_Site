@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript haqida ma'lumot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>TypeScriptga xush kelibsiz</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">TypeScript haqida</a></li>
+                    <li><a href="#examples">Misollar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section id="about">
+                <h2>TypeScript haqida</h2>
+                <p>TypeScript - bu JavaScriptning typed supersetidir va oddiy JavaScriptga kompilyatsiya qilinadi.</p>
+                <p>JavaScript eng mashhur dasturlash tillaridan biridir. Buning sabablaridan biri uning dinamik tarzda
+                    yozilganligidir. Boshqacha qilib aytganda, JavaScript erkinroq tildir, lekin siz loyihangizda juda
+                    ko‘p kodga duch kelsangiz, bu erkinlik vahimaga aylanishi mumkin.</p>
+                <div class="border"></div>
+                <p>Keling ushbu holatga nazar tashlab ko‘ramiz:</p>
+                <div
+                    style=" border-left: 4px solid #007acc;background: #c3ddff;padding: 10px; border-radius: 0px 10px 10px 0;">
+                    <p>
+                        const pikachu = (a, b) => { return a + b;}
+                    </p>
+                </div>
+                <p>Biror narsa deyish qiyin, chunki pikachu funksiyasi har qanday turdagi qiymatlarni qabul qilishi
+                    mumkin, masalan, satr, raqam va hokazo.</p>
+                <div
+                    style=" border-left: 4px solid #1b8f11;background: #89ffb0;padding: 10px; border-radius: 0px 10px 10px 0;">
+                    <p>
+                        // Raqam uzatiladi. const pikachu = (a, b) => { return a + b;}const result = pikachu(2021,
+                        9);console.log(result); <br />
+                        // 2030 <br />
+                        // Satr uzatiladi. const pikachu = (a, b) => { return a + b;}const result = pikachu("2021",
+                        "9");console.log(result); <br />
+                        // 20219
+                    </p>
+                </div>
+            </section>
+            <section id="examples">
+                <h2>Misollar</h2>
+                <div id="example-list" style="display: flex; flex-wrap: wrap; gap: 30px;">
+                    <div
+                        style=" border-left: 4px solid #007acc; width: 100%; padding-left: 40px; background: #c3ddff;padding: 10px; border-radius: 0px 10px 10px 0; text-align: start;">
+                        <p style='padding-left: 60px;'>
+                            function greet(name: string): string {<br /><br />
+                            return `Salom, ${name}!`;<br />
+                            }<br />
+
+                            console.log(greet("Khojiakbar")); // Salom, Khojiakbar!
+
+                        </p>
+                    </div>
+                    <div
+                        style=" border-left: 4px solid #007acc; width: 100%; padding-left: 40px; background: #c3ddff;padding: 10px; border-radius: 0px 10px 10px 0; text-align: start;">
+                        <p style='padding-left: 60px;'>
+                            interface User {<br/>
+                                id: number;<br/>
+                                name: string;<br/>
+                                isActive: boolean;<br/>
+                            }<br/><br/>
+                            
+                            const user: User = {<br/>
+                                id: 1,<br/>
+                                name: "Khojiakbar",<br/>
+                                isActive: true,<br/>
+                            };<br/><br/>
+                            
+                            console.log(user); // { id: 1, name: 'Khojiakbar', isActive: true }
+                            
+
+                        </p>
+                    </div>
+                    <div
+                        style=" border-left: 4px solid #007acc; width: 100%; padding-left: 40px; background: #c3ddff;padding: 10px; border-radius: 0px 10px 10px 0; text-align: start;">
+                        <p style='padding-left: 60px;'>
+                            function getArray<T>(items: T[]): T[] {<br>
+                                return new Array().concat(items);<br>
+                            }<br><br>
+                            
+                            const numberArray = getArray<number>([1, 2, 3]);<br>
+                            const stringArray = getArray<string>(["a", "b", "c"]);<br><br>
+                                
+                            console.log(numberArray); // [1, 2, 3]<br>
+                            console.log(stringArray); // ["a", "b", "c"]
+                            
+
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 TypeScript haqida ma'lumot sayti</p>
+        </div>
+    </footer>
+    <script src="scripts/app.ts"></script>
+</body>
+
+</html>
